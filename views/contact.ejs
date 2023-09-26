@@ -1,0 +1,35 @@
+<!--
+ * File Name: contact.ejs 
+ * Student’s Name: Koji Abe
+ * StudentID: 301268388
+ * Date: Sep 23, 2023
+-->
+
+<!-- Stylesheet Linking -->
+<link rel="stylesheet" href="/css/styles.css">
+<!-- Navigation Bar -->
+<%- include('partials/navbar') %>
+
+<h2>Contact Information</h2>
+<p>Email: centennial@example.com</p>
+<p>Phone: 123-456-7890</p>
+
+<h2>Send a Message</h2>
+<form action="/submit_contact_form" method="post">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="contactNumber">Contact Number:</label>
+    <input type="tel" id="contactNumber" name="contactNumber">
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <input type="submit" value="Send Message">
+</form>
